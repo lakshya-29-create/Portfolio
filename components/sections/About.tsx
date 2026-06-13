@@ -42,7 +42,7 @@ function AnimatedCounter({ value, suffix, label, inView }: { value: number; suff
   );
 }
 
-/* ─── Glowing portrait placeholder ring ─── */
+/* ─── Glowing portrait ring with real photo ─── */
 function PortraitRing() {
   const ringRef = useRef<HTMLDivElement>(null);
 
@@ -72,21 +72,14 @@ function PortraitRing() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Inner content — gradient placeholder with initials */}
-      <div className="absolute inset-[3px] rounded-full bg-matte overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-matte to-cyan-500/20" />
-        <div className="absolute inset-0 bg-gradient-glow opacity-30" />
-        <motion.span
-          className="relative text-6xl md:text-7xl font-heading font-bold text-white/10"
-          animate={{ scale: [1, 1.02, 1], opacity: [0.1, 0.15, 0.1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          AC
-        </motion.span>
-        {/* Decorative dots */}
-        <div className="absolute top-[15%] left-[18%] w-2 h-2 rounded-full bg-indigo-400/20" />
-        <div className="absolute bottom-[20%] right-[15%] w-1.5 h-1.5 rounded-full bg-cyan-400/20" />
-        <div className="absolute top-[35%] right-[20%] w-1 h-1 rounded-full bg-violet-400/15" />
+      {/* Inner content — actual photo */}
+      <div className="absolute inset-[3px] rounded-full overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/Myphoto.jpeg"
+          alt="Lakshya Tak"
+          className="w-full h-full object-cover"
+        />
       </div>
     </div>
   );
