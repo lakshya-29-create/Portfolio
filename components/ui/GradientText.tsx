@@ -17,9 +17,9 @@ export default function GradientText({
   as: Tag = "span",
   className = "",
   animate = true,
-  from = "#4F46E5",
-  via = "#06B6D4",
-  to = "#7C3AED",
+  from = "#3B82F6",
+  via = "#8B5CF6",
+  to = "#EC4899",
 }: GradientTextProps) {
   return (
     <Tag className={`relative inline-block ${className}`}>

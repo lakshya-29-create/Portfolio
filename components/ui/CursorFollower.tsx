@@ -11,7 +11,7 @@ interface CursorFollowerProps {
 
 export default function CursorFollower({
   size = 20,
-  color = "rgba(79, 70, 229, 0.5)",
+  color = "rgba(139, 92, 246, 0.55)",
   trail = true,
 }: CursorFollowerProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,7 +111,7 @@ export default function CursorFollower({
         <div
           className="h-full w-full rounded-full border"
           style={{
-            borderColor: "rgba(79, 70, 229, 0.3)",
+            borderColor: "rgba(139, 92, 246, 0.35)",
             backdropFilter: "blur(4px)",
           }}
         />
@@ -155,7 +155,7 @@ function CursorTrail({
         height: 8,
         borderRadius: "50%",
         background:
-          "linear-gradient(135deg, rgba(79, 70, 229, 0.3), rgba(6, 182, 212, 0.3))",
+          "linear-gradient(135deg, rgba(59,130,246,0.35), rgba(236,72,153,0.35))",
         filter: "blur(2px)",
       }}
     />

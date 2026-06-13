@@ -43,7 +43,7 @@ export default function MagneticButton({
 
   const variantClasses = {
     primary:
-      "bg-gradient-accent text-white font-medium shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40",
+      "bg-gradient-accent text-white font-medium shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40",
     secondary:
       "bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover:text-white",
     ghost:

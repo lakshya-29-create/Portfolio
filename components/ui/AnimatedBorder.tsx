@@ -17,7 +17,7 @@ export default function AnimatedBorder({
   borderRadius = "1rem",
   borderWidth = 1,
   speed = 4,
-  colors = ["#4F46E5", "#06B6D4", "#7C3AED", "#4F46E5"],
+  colors = ["#3B82F6", "#8B5CF6", "#EC4899", "#3B82F6"],
 }: AnimatedBorderProps) {
   return (
     <div

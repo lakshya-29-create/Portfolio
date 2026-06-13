@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="relative z-10">
           <GradientText as="span" className="text-xl font-heading font-bold">
-            Portfolio
+            Lakshya.
           </GradientText>
         </Link>
 

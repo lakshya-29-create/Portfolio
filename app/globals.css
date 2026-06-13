@@ -19,7 +19,7 @@
   }
 
   ::selection {
-    background: rgba(79, 70, 229, 0.4);
+    background: rgba(139, 92, 246, 0.45);
     color: white;
   }
 
@@ -38,7 +38,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #4F46E5;
+    background: #8B5CF6;
   }
 }
 
@@ -58,7 +58,7 @@
     inset: 0;
     padding: 1px;
     border-radius: inherit;
-    background: linear-gradient(135deg, #4F46E5, #06B6D4, #7C3AED);
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6, #EC4899);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -99,7 +99,7 @@
   }
 
   .prose-custom a {
-    @apply text-indigo-400 underline decoration-indigo-400/30 underline-offset-2 hover:decoration-indigo-400 transition-all duration-300;
+    @apply text-violet-400 underline decoration-violet-400/30 underline-offset-2 hover:decoration-violet-400 transition-all duration-300;
   }
 
   .prose-custom strong {
@@ -111,7 +111,7 @@
   }
 
   .prose-custom code {
-    @apply px-1.5 py-0.5 rounded-md text-sm font-mono bg-white/[0.06] text-cyan-300;
+    @apply px-1.5 py-0.5 rounded-md text-sm font-mono bg-white/[0.06] text-violet-300;
   }
 
   .prose-custom pre {
@@ -123,7 +123,7 @@
   }
 
   .prose-custom blockquote {
-    @apply border-l-2 border-indigo-500/30 pl-6 py-2 my-8 text-white/50 italic;
+    @apply border-l-2 border-violet-500/30 pl-6 py-2 my-8 text-white/50 italic;
   }
 
   .prose-custom ul,

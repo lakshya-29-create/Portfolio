@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import GradientText from "@/components/ui/GradientText";
 import MagneticButton from "@/components/ui/MagneticButton";
 
-const ROLES = ["Full Stack Developer", "UI/UX Enthusiast", "Problem Solver"];
+const ROLES = ["Full Stack Developer", "UI/UX Enthusiast", "Creative Technologist", "Open Source Builder"];
 
 /* ─── Gradient mesh background with floating orbs ─── */
 function GradientMeshBackground() {
@@ -21,11 +21,11 @@ function GradientMeshBackground() {
         <rect width="100%" height="100%" fill="url(#hero-grid)" />
       </svg>
       {[
-        { top: "10%", left: "5%", size: 600, color: "rgba(79,70,229,0.18)", dur: 14, xDrift: 70, yDrift: -50 },
-        { top: "65%", left: "3%", size: 500, color: "rgba(6,182,212,0.14)", dur: 16, xDrift: -60, yDrift: 60 },
-        { top: "25%", left: "45%", size: 420, color: "rgba(79,70,229,0.10)", dur: 12, xDrift: 40, yDrift: 40 },
-        { top: "75%", left: "55%", size: 380, color: "rgba(124,58,237,0.10)", dur: 18, xDrift: -50, yDrift: -40 },
-        { top: "5%", left: "70%", size: 350, color: "rgba(6,182,212,0.08)", dur: 13, xDrift: 45, yDrift: 55 },
+      { top: "10%", left: "5%",  size: 600, color: "rgba(59,130,246,0.18)",  dur: 14, xDrift:  70, yDrift: -50 },
+        { top: "65%", left: "3%",  size: 500, color: "rgba(236,72,153,0.14)",  dur: 16, xDrift: -60, yDrift:  60 },
+        { top: "25%", left: "45%", size: 420, color: "rgba(139,92,246,0.12)",  dur: 12, xDrift:  40, yDrift:  40 },
+        { top: "75%", left: "55%", size: 380, color: "rgba(236,72,153,0.10)",  dur: 18, xDrift: -50, yDrift: -40 },
+        { top: "5%",  left: "70%", size: 350, color: "rgba(59,130,246,0.08)",  dur: 13, xDrift:  45, yDrift:  55 },
       ].map((orb, i) => (
         <motion.div
           key={i}
@@ -64,7 +64,7 @@ function RoleText({ texts, currentIndex }: { texts: string[]; currentIndex: numb
       >
         {texts[currentIndex]}
         <motion.span
-          className="inline-block w-[3px] h-[0.9em] bg-indigo-400 rounded-full align-middle"
+          className="inline-block w-[3px] h-[0.9em] bg-violet-400 rounded-full align-middle"
           animate={{ opacity: [1, 0] }}
           transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
         />
@@ -129,8 +129,8 @@ export default function Hero() {
         >
           <h1 className="text-[clamp(2.8rem,10vw,5.5rem)] font-heading font-bold leading-[0.88] tracking-tight">
             Hi, I'm{" "}
-            <GradientText from="#4F46E5" via="#06B6D4" to="#06B6D4">
-              Alex Chen
+            <GradientText from="#3B82F6" via="#8B5CF6" to="#EC4899">
+              Lakshya Tak
             </GradientText>
           </h1>
         </motion.div>
@@ -154,8 +154,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-6 text-base md:text-lg text-white/30 font-body max-w-xl mx-auto leading-relaxed"
         >
-          I craft performant, beautiful web experiences at the intersection
-          of design and engineering — turning complex ideas into reality.
+          I build performant, beautiful web experiences at the intersection
+          of design and engineering — turning complex ideas into vibrant reality.
         </motion.p>
 
         {/* CTA Row */}
@@ -179,9 +179,9 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-xl font-body font-medium text-base text-white/70
               border border-white/10 transition-all duration-300
-              hover:border-indigo-500/40 hover:text-white hover:shadow-[0_0_30px_-5px_rgba(79,70,229,0.3)]"
+              hover:border-violet-500/40 hover:text-white hover:shadow-[0_0_30px_-5px_rgba(139,92,246,0.3)]"
           >
-            <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/0 via-indigo-500/5 to-cyan-500/0
+            <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-electric-500/0 via-violet-500/5 to-pink-500/0
               opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
