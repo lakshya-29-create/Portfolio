@@ -66,29 +66,41 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <GlowCard glowSize={350} glowColor="rgba(79,70,229,0.10)">
           <div className="overflow-hidden rounded-t-2xl">
-            {/* Cover image placeholder */}
+            {/* Cover image */}
             <div className={`relative h-48 md:h-52 bg-gradient-to-br ${gradient} flex items-center justify-center overflow-hidden`}>
-              {/* Decorative pattern */}
-              <div className="absolute inset-0 opacity-[0.12]">
-                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id={`grid-${project.id}`} width="24" height="24" patternUnits="userSpaceOnUse">
-                      <circle cx="12" cy="12" r="1" fill="white" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill={`url(#grid-${project.id})`} />
-                </svg>
-              </div>
+              {project.cover_image_url ? (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={project.cover_image_url}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
+              ) : (
+                <>
+                  {/* Decorative pattern fallback */}
+                  <div className="absolute inset-0 opacity-[0.12]">
+                    <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <pattern id={`grid-${project.id}`} width="24" height="24" patternUnits="userSpaceOnUse">
+                          <circle cx="12" cy="12" r="1" fill="white" />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill={`url(#grid-${project.id})`} />
+                    </svg>
+                  </div>
+                  {/* Initials */}
+                  <span className="relative text-3xl md:text-4xl font-heading font-bold text-white/20 select-none">
+                    {initials}
+                  </span>
+                </>
+              )}
               {/* Glow on hover */}
               <motion.div
                 className="absolute inset-0 bg-gradient-accent-horizontal opacity-0"
                 animate={{ opacity: isHovered ? 0.08 : 0 }}
                 transition={{ duration: 0.4 }}
               />
-              {/* Initials */}
-              <span className="relative text-3xl md:text-4xl font-heading font-bold text-white/20 select-none">
-                {initials}
-              </span>
               {/* Floating orbs */}
               <motion.div
                 className="absolute w-16 h-16 rounded-full bg-white/[0.04] blur-xl"
@@ -110,6 +122,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               />
             </div>
           </div>
+
 
           <div className="p-6 md:p-7">
             {/* Category badge */}
